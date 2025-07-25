@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <main>
+     <h1>Todo List</h1>  
+     <form>
+        <label for="todo">enter your task</label>
+        <input type="text" id="todo" name="todo">
+        <p id="error" class="error"></p>
+        <button type="button" onclick="createTodo(event)">add</button>
+     </form>
+     <ul id="list">
+
+     </ul>
+     <div id="editModal" class="modal">
+     <div class="modal-content">
+        <h2>Edit Task</h2>
+        <input type="text" id="editInput" />
+        <p id="modalError" class="error"></p>
+        <div class="modal-buttons">
+          <button id="saveBtn">Save</button>
+          <button id="closeBtn" onclick="closeModal()">Close</button>
+       </div>
+    </div>
+  </div>
+
+    </main>
+     -->
+  <main class="container">
+    <h1>To-Do List</h1>
+    
+    <!-- Form -->
+    <form id="todo-form" class="form">
+      <input type="text" id="task-input" placeholder="Add a new task" aria-label="Enter a new task" required>
+      <button onclick="createTodo(event)">Add Task</button>
+    </form>
+    
+    <!-- Error Message -->
+    <p id="error-message" class="error" role="alert"></p>
+    
+    <!-- Tabs -->
+    <div class="tabs-wrapper">
+      <nav class="tabs" role="tablist">
+        <span class="tab tab-active" data-tab="active" role="tab" aria-selected="true">Active</span>
+        <span class="tab" data-tab="completed" role="tab" aria-selected="false">Completed</span>
+        <span class="tab" data-tab="all" role="tab" aria-selected="false">All</span>        
+      </nav>
+    </div>
+    
+    <!-- Task List -->
+    <ul id="task-list" class="task-list" role="list"></ul>
+    <!-- edit model -->
+     <div id="editModal" class="modal">
+     <div class="modal-content">
+        <h2>Edit Task</h2>
+        <input type="text" id="editInput" />
+        <p id="modalError" class="error"></p>
+        <div class="modal-buttons">
+          <button id="saveBtn">Save</button>
+          <button id="closeBtn" onclick="closeModal()">Close</button>
+       </div>
+    </div>
+  </div>     
+  </main>
+
+ <script src="script.js"></script>
+</body>
+</html>
